@@ -1,3 +1,14 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QWidget>
+#include <QVBoxLayout>
+
+#include <QMenuBar>
+#include <QMenu>
+#include <QAction>
+
+#include <QTextEdit>
 #include <QPushButton>
 
 class MainWindow : public QWidget
