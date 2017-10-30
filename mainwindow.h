@@ -3,13 +3,12 @@
 
 #include <QWidget>
 #include <QVBoxLayout>
-
 #include <QMenuBar>
 #include <QMenu>
 #include <QAction>
-
 #include <QTextEdit>
 #include <QPushButton>
+#include <QFileDialog>
 
 class MainWindow : public QWidget
 {
@@ -27,11 +26,9 @@ private:
 
     QAction* importAction;
     QAction* exitAction;
-
     QAction* languageAction;
-
     QAction* aboutAction;
-    //++
+
     QTextEdit* textEdit;
     QPushButton* checkButton;
     QPushButton* clearButton;
@@ -42,6 +39,11 @@ private:
 
 public:
     explicit MainWindow();
+
+private slots:
+    void Close();
+    void Import();
+    void Clear();
 };
 
 #endif // MAINWINDOW_H
