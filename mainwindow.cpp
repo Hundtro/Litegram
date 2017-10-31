@@ -66,19 +66,9 @@ void MainWindow::CreateButtonsLayout()
 
 void MainWindow::Import()
 {
-    QFileDialog* dialog = new QFileDialog(this);
-
-    dialog->setFileMode(QFileDialog::ExistingFile);
-    dialog->setNameFilter(tr("text files(*.txt)"));
-    dialog->setViewMode(QFileDialog::List);
-    dialog->exec();
-
-    QString path = dialog->selectedFiles().first();
+    QString path = QFileDialog::getOpenFileName(this, tr("Select txt file to import"), "", tr("txt files (*.txt)"));
     QString text = QString::fromStdString(ImportText(path.toUtf8().constData()));
-
     this->textEdit->setText(text);
-
-    delete dialog;
 }
 
 void MainWindow::Clear()
