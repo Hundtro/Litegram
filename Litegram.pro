@@ -5,7 +5,9 @@ QT += core gui widgets
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    txtfile.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    txtfile.h
