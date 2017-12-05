@@ -9,11 +9,14 @@
 #include <QTextEdit>
 #include <QPushButton>
 #include <QFileDialog>
+#include <language.h>
 
 class MainWindow : public QWidget
 {
 private:
     Q_OBJECT
+
+    Language interfaceLanguage;
 
     QVBoxLayout* mainLayout;
     QGridLayout* textLayout;
@@ -33,9 +36,18 @@ private:
     QPushButton* checkButton;
     QPushButton* clearButton;
 
+    QFileDialog* importDialog;
+
     void CreateMenuBar();
     void CreateTextLayout();
     void CreateButtonsLayout();
+    void SetMenuBar();
+    void SetTextLayout();
+    void SetButtonsLayout();
+    void CreateSetMainLayout();
+    void SetLanguage();
+    void SetInterfaceText(lang l);
+    void GetFile(QString title, QString filter);//
 
 public:
     explicit MainWindow();
