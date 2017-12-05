@@ -1,8 +1,9 @@
 #ifndef TXTFILE_H
 #define TXTFILE_H
 
-#include <fstream>
+#include <QFile>
+#include <QTextStream>
 
-std::string ImportText(std::string path);
+QString ImportText(QString path);
 
 #endif // TXTFILE_H
