@@ -53,9 +53,9 @@ public:
     explicit MainWindow();
 
 private slots:
-    void Close();
     void Import();
     void Clear();
+    void Close();
 };
 
 #endif // MAINWINDOW_H

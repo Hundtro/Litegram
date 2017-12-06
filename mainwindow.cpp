@@ -131,3 +131,8 @@ void MainWindow::Clear()
 {
     textEdit->clear();
 }
+
+void MainWindow::Close()
+{
+    exit(0);
+}
