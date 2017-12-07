@@ -47,7 +47,7 @@ private:
     void CreateSetMainLayout();
     void SetLanguage();
     void SetInterfaceText(lang l);
-    void GetFile(QString title, QString filter);//
+    QString OpenFile(lang l);
 
 public:
     explicit MainWindow();

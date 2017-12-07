@@ -108,18 +108,23 @@ void MainWindow::SetInterfaceText(lang l){
     clearButton->setText(l.buttom_clear);
 }
 
+QString MainWindow::OpenFile(lang l){
+
+    return QFileDialog::getOpenFileName
+           (this, l.title_import_txt, "", l.filter_import_txt);
+}
+
 void MainWindow::Import()
 {
-    //
     QString path;
 
-    switch(this->interfaceLanguage)
+    switch(interfaceLanguage)
     {
         case english:
-            path = QFileDialog::getOpenFileName(this, en.title_import_txt, "", en.filter_import_txt);
+            path = OpenFile(en);
             break;
         case polish:
-            path = QFileDialog::getOpenFileName(this, pl.title_import_txt, "", pl.filter_import_txt);
+            path = OpenFile(pl);
             break;
     }
 
