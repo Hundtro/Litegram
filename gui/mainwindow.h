@@ -5,57 +5,45 @@
 #include <QVBoxLayout>
 #include <QMenuBar>
 #include <QMenu>
+#include <QActionGroup>
 #include <QAction>
 #include <QTextEdit>
 #include <QPushButton>
-#include <QFileDialog>
-#include <language.h>
 
 class MainWindow : public QWidget
 {
 private:
     Q_OBJECT
 
-    Language interfaceLanguage;
-
     QVBoxLayout* mainLayout;
     QGridLayout* textLayout;
     QHBoxLayout* buttonsLayout;
-
     QMenuBar* menuBar;
     QMenu* programMenu;
     QMenu* settingsMenu;
+    QMenu* languageMenu;
     QMenu* helpMenu;
-
+    QActionGroup* languageGroup;
+    QAction* polishMenuAction;
+    QAction* englishMenuAction;
     QAction* importAction;
     QAction* exitAction;
-    QAction* languageAction;
     QAction* aboutAction;
-
     QTextEdit* textEdit;
     QPushButton* checkButton;
     QPushButton* clearButton;
 
-    QFileDialog* importDialog;
-
-    void CreateMenuBar();
-    void CreateTextLayout();
-    void CreateButtonsLayout();
-    void SetMenuBar();
-    void SetTextLayout();
-    void SetButtonsLayout();
-    void CreateSetMainLayout();
-    void SetLanguage();
-    void SetInterfaceText(lang l);
-    QString OpenFile(lang l);
+    void create_elements();
+    void set_elements();
 
 public:
     explicit MainWindow();
 
-private slots:
-    void Import();
-    void Clear();
-    void Close();
+    void set_menu_title(char* menu_name, char* title);
+    void set_action_text(char* action_name, char* text);
+    void set_button_text(char* button_name, char* text);
+    void set_edited_text(char* text);
+    const char* get_edited_text();
 };
 
 #endif // MAINWINDOW_H

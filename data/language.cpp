@@ -1,4 +1,4 @@
-#include <language.h>
+#include <data/language.h>
 
 lang en = {
 
@@ -7,10 +7,13 @@ lang en = {
     "Exit",
     "Settings",
     "Language",
+    "English",
+    "Polish",
     "Help",
     "About",
     "Check",
     "Clear",
+
     "Select txt file to import",
     "txt files (*.txt)"
 };
@@ -22,10 +25,13 @@ lang pl = {
     "Zamknij",
     "Ustalenia",
     "Język",
+    "Angielski",
+    "Polski",
     "Pomoc",
     "O programie",
     "Weryfikuj",
     "Wyczyść",
+
     "Wybierz plik txt do wczytania",
     "pliki txt (*.txt)"
 };
