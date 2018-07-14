@@ -1,31 +1,27 @@
-#include <language.h>
+#include "data/wmain_data.h"
 
-lang en = {
+WMainText wmain_en = {
 
     "Program",
     "Import from txt file...",
     "Exit",
     "Settings",
-    "Language",
+    "Options...",
     "Help",
     "About",
     "Check",
     "Clear",
-    "Select txt file to import",
-    "txt files (*.txt)"
 };
 
-lang pl = {
+WMainText wmain_pl = {
 
     "Program",
     "Import z pliku txt...",
     "Zamknij",
     "Ustalenia",
-    "Język",
+    "Ustalenia...",
     "Pomoc",
     "O programie",
     "Weryfikuj",
     "Wyczyść",
-    "Wybierz plik txt do wczytania",
-    "pliki txt (*.txt)"
 };

@@ -5,11 +5,13 @@ QT += core gui widgets
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
-    txtfile.cpp \
-    language.cpp
+    interface/mainwindow.cpp \
+    data/wmain_data.cpp
 
 HEADERS += \
-    mainwindow.h \
-    txtfile.h \
-    language.h
+    interface/mainwindow.h \
+    control.h \
+    data/wmain_data.h \
+    import_control.h
+
+
