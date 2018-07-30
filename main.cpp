@@ -1,11 +1,12 @@
 #include <QApplication>
-#include <data/tools.h> //t
+#include "control.h"
 
 int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
 
-    ui::create_mainwindow();
+    Control controller;
 
     return app.exec();
 }
+
