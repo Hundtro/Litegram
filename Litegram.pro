@@ -13,5 +13,3 @@ HEADERS += \
     control.h \
     data/wmain_data.h \
     import_control.h
-
-
