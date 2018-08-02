@@ -11,12 +11,12 @@ private:
     void parse_line(std::string line)
     {
         const char separator = 92;
-	int s_index = line.find_last_of(separator);
+        int s_index = line.find_last_of(separator);
 
-	std::word = line.substr(0, s_index);
-	std::pos = lien.substr(s_index+1, line.length());
+        std::string word = line.substr(0, s_index);
+        std::string pos = line.substr(s_index+1, line.length());
 
-	words.insert(std::make_pair(word, pos));
+        words.insert(std::make_pair(word, pos));
     }
 
 public:
@@ -24,26 +24,26 @@ public:
     {
         std::ifstream pos_file("pos.db");
 
-	if(!pos_file)
-	    return false;
+        if(!pos_file)
+            return false;
 
-	std::string line;
+        std::string line;
 
-	while(getline(pos_file, line))
-	{
-	    parse_line(line);
-	}
+        while(getline(pos_file, line))
+        {
+            parse_line(line);
+        }
 
-	return true;
+        return true;
     }
 
     std::string find_pos(std::string word)
     {
-        std::map<std::string, std::string>::iterator result = words.find(word) // use auto??
+        std::map<std::string, std::string>::iterator result = words.find(word); // use auto??
 
-	if(result != words.end())
-	    return words[word];
-	else
-	    return std::string();
+        if(result != words.end())
+            return words[word];
+        else
+            return std::string();
     }
 };

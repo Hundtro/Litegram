@@ -31,7 +31,7 @@ public:
     ~Control()
     {
         delete wmain;
-	delete dict;
+        delete dict;
     }
 
 public slots:
