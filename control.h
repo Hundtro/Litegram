@@ -1,18 +1,22 @@
 #ifndef CONTROL_H
 #define CONTROL_H
 
+#include "data/dictionary.h"
 #include "interface/mainwindow.h"
 
 class Control : public QObject
 {
 private:
     Q_OBJECT
+    Dictionary* dict;
     MainWindow* wmain;
 
 public:
     Control()
     {
         wmain = new MainWindow();
+        dict = new Dictionary();
+        //add load dictionary and errors check
 
         //import
         connect(wmain, SIGNAL(exit_signal()), this, SLOT(exit_slot()));
@@ -27,6 +31,7 @@ public:
     ~Control()
     {
         delete wmain;
+	delete dict;
     }
 
 public slots:

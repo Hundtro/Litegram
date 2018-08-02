@@ -12,4 +12,5 @@ HEADERS += \
     interface/mainwindow.h \
     control.h \
     data/wmain_data.h \
+    data/dictionary.h \
     import_control.h
