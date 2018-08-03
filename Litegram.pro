@@ -6,6 +6,7 @@ QT += core gui widgets
 SOURCES += \
     main.cpp \
     interface/mainwindow.cpp \
+    control/control.cpp \
     data/wmain_data.cpp \
     data/dictionary.cpp
 

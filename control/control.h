@@ -12,58 +12,16 @@ private:
     MainWindow* wmain;
 
 public:
-    Control()
-    {
-        wmain = new MainWindow();
-        dict = new Dictionary();
-        //add load dictionary and errors check
-
-        //import
-        connect(wmain, SIGNAL(exit_signal()), this, SLOT(exit_slot()));
-        //options
-        //about
-        //check
-        connect(wmain, SIGNAL(clear_signal()), this, SLOT(clear_slot()));
-
-        wmain->show();
-    }
-
-    ~Control()
-    {
-        delete wmain;
-        delete dict;
-    }
-
+    Control();
+    ~Control();
+    
 public slots:
-    void import_slot()
-    {
-      //
-    }
-
-    void exit_slot()
-    {
-        std::exit(0);
-    }
-
-    void options_slot()
-    {
-      //
-    }
-
-    void about_slot()
-    {
-      //
-    }
-
-    void check_slot()
-    {
-      //
-    }
-
-    void clear_slot()
-    {
-        wmain->set_text("");
-    }
+    void import_slot();
+    void exit_slot();
+    void options_slot();
+    void about_slot();
+    void check_slot();
+    void clear_slot();
 };
 
 #endif // CONTROL_H
