@@ -1,5 +1,5 @@
 #include <QApplication>
-#include "control.h"
+#include "control/control.h"
 
 int main(int argc, char* argv[])
 {

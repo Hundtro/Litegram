@@ -11,7 +11,7 @@ SOURCES += \
 
 HEADERS += \
     interface/mainwindow.h \
-    control.h \
+    control/control.h \
+    control/import_control.h
     data/wmain_data.h \
     data/dictionary.h \
-    import_control.h

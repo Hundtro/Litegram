@@ -6,4 +6,3 @@ To do (new):
 - messages.h/errors.h
 - enum language?
 - separate controlers Dc from Df
-- separate controlers to folder
