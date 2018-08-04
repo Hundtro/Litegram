@@ -3,6 +3,8 @@
 
 enum Language = {english, polish};
 
+/*this is the test struct*/
+
 struct Settings
 {
     Language lang;
