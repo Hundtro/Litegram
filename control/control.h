@@ -2,6 +2,7 @@
 #define CONTROL_H
 
 #include "data/data.h"
+#include "data/language.h"
 #include "data/dictionary.h"
 #include "interface/mainwindow.h"
 
