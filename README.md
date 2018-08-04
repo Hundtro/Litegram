@@ -5,4 +5,4 @@ To do (new):
 - data.h
 - settings.h (struct?)
 - messages.h/errors.h
-- enum language?
+- in language -> change char* to const char*
