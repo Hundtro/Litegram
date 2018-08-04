@@ -1,6 +1,7 @@
 #ifndef CONTROL_H
 #define CONTROL_H
 
+#include "data/data.h"
 #include "data/dictionary.h"
 #include "interface/mainwindow.h"
 
