@@ -1,6 +1,6 @@
 #include "data/language.h"
 
-char* lang_en[] = 
+const char* lang_en[] =
 {
     "Program",
     "Import from txt file...",
@@ -11,9 +11,9 @@ char* lang_en[] =
     "About",
     "Check",
     "Clear",
-}
+};
 
-char* lang_pl[] =
+const char* lang_pl[] =
 {
     "Program",
     "Import z pliku txt...",
@@ -26,4 +26,4 @@ char* lang_pl[] =
     "Wyczysc",
 };
 
-char** langs[2] = { lang_en, lang_pl };
+const char** langs[2] = { lang_en, lang_pl };

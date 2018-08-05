@@ -1,9 +1,11 @@
 #include "data/data.h"
 
+/*
 Settings setting = {
 
-    english,
+    EN,
     false,
     false,
     false
 };
+*/

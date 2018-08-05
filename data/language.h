@@ -1,13 +1,13 @@
 #ifndef LANGUAGE_H
 #define LANGUAGE_H
 
-enum Language = 
-{ 
+enum
+{
     EN,
-    PL 
+    PL
 };
 
-enum Elements =
+enum
 {
     WMAIN_PROGRAM,
     WMAIN_IMPORT_TEXT,
@@ -19,5 +19,9 @@ enum Elements =
     WMAIN_CHECK,
     WMAIN_CLEAR
 };
+
+extern const char* lang_en[];
+extern const char* lang_pl[];
+extern const char** langs[];
 
 #endif

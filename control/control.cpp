@@ -13,6 +13,7 @@ Control :: Control()
     //check
     connect(wmain, SIGNAL(clear_signal()), this, SLOT(clear_slot()));
 
+    wmain->set_interface(langs[EN]);
     wmain->show();
 }
 
@@ -51,4 +52,3 @@ void Control :: clear_slot()
 {
         wmain->set_text("");
 }
-

@@ -4,7 +4,7 @@ MainWindow :: MainWindow()
 {
     create_elements();
     set_elements();
-    set_interface(wmain_en);
+    /*set_interface(wmain_en);*/
 
     //import
     connect(exitAction, SIGNAL(triggered(bool)), this, SIGNAL(exit_signal()));
@@ -77,17 +77,20 @@ void MainWindow :: set_elements()
     setLayout(mainLayout);
 }
 
-void MainWindow :: set_interface(WMainText wmt)
+void MainWindow :: set_interface(const char* lang[])
 {
-    programMenu->setTitle(QString(wmt.program));
-    settingsMenu->setTitle(QString(wmt.settings));
-    helpMenu->setTitle(QString(wmt.help));
-    importAction->setText(QString(wmt.import_txt));
-    exitAction->setText(QString(wmt.exit));
-    optionsAction->setText(QString(wmt.options));
-    aboutAction->setText(QString(wmt.about));
-    checkButton->setText(QString(wmt.check));
-    clearButton->setText(QString(wmt.clear));
+
+    programMenu->setTitle(QString(lang[WMAIN_PROGRAM]));
+
+    settingsMenu->setTitle(QString(lang[WMAIN_SETTINGS]));
+    helpMenu->setTitle(QString(lang[WMAIN_HELP]));
+    importAction->setText(QString(lang[WMAIN_IMPORT_TEXT]));
+    exitAction->setText(QString(lang[WMAIN_EXIT]));
+    optionsAction->setText(QString(lang[WMAIN_OPTIONS]));
+    aboutAction->setText(QString(lang[WMAIN_ABOUT]));
+    checkButton->setText(QString(lang[WMAIN_CHECK]));
+    clearButton->setText(QString(lang[WMAIN_CLEAR]));
+
 }
 
 void MainWindow :: set_text(const char *text)

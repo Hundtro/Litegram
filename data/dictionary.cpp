@@ -20,7 +20,7 @@ bool Dictionary ::load()
 
     std::string line;
 
-    while(getline(pos_file, line))
+    while(std::getline(pos_file, line))
     {
         parse_line(line);
     }

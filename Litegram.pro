@@ -8,15 +8,13 @@ SOURCES += \
     interface/mainwindow.cpp \
     control/control.cpp \
     data/data.cpp \
-    data/wmain_data.cpp \
     data/dictionary.cpp \
     data/language.cpp
 
 HEADERS += \
     interface/mainwindow.h \
     control/control.h \
-    control/import_control.h
+    control/import_control.h \
     data/data.h \
-    data/wmain_data.h \
     data/dictionary.h \
     data/language.h

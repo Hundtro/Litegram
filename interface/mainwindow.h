@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "data/wmain_data.h"
+#include "data/data.h"
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QMenuBar>
@@ -36,7 +36,7 @@ private:
 
 public:
     explicit MainWindow();
-    void set_interface(WMainText wmt);
+    void set_interface(const char* lang[]);
     void set_text(const char* text);
     const char* get_text();
 
