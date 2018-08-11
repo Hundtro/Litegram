@@ -2,6 +2,7 @@
 #define DATA_H
 
 #include "data/language.h"
+#include "data/messages.h"
 
 /*this is a test struct*/
 

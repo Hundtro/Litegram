@@ -4,7 +4,9 @@ Control :: Control()
 {
     wmain = new MainWindow();
     dict = new Dictionary();
+
     //add load dictionary and errors check
+    //add set interface
 
     //import
     connect(wmain, SIGNAL(exit_signal()), this, SLOT(exit_slot()));
@@ -12,14 +14,17 @@ Control :: Control()
     //about
     //check
     connect(wmain, SIGNAL(clear_signal()), this, SLOT(clear_slot()));
-
-    wmain->show();
 }
 
 Control :: ~Control()
 {
     delete wmain;
     delete dict;
+}
+
+void Control :: begin()
+{
+    wmain->show();
 }
 
 void Control :: import_slot()

@@ -15,6 +15,7 @@ private:
 public:
     Control();
     ~Control();
+    void begin();
 
 public slots:
     void import_slot();

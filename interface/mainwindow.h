@@ -31,9 +31,6 @@ private:
     QPushButton* checkButton;
     QPushButton* clearButton;
 
-    void create_elements();
-    void set_elements();
-
 public:
     explicit MainWindow();
     void set_interface(const char* lang[]);
