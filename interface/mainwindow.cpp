@@ -4,7 +4,11 @@ MainWindow :: MainWindow()
 {
     create_elements();
     set_elements();
-    /*set_interface(wmain_en);*/
+    
+    if(options.lang == PL)
+        set_interface(langs[PL]);
+    if(options.lang == EN)
+        set_interface(langs[EN]);
 
     //import
     connect(exitAction, SIGNAL(triggered(bool)), this, SIGNAL(exit_signal()));
@@ -81,7 +85,6 @@ void MainWindow :: set_interface(const char* lang[])
 {
 
     programMenu->setTitle(QString(lang[WMAIN_PROGRAM]));
-
     settingsMenu->setTitle(QString(lang[WMAIN_SETTINGS]));
     helpMenu->setTitle(QString(lang[WMAIN_HELP]));
     importAction->setText(QString(lang[WMAIN_IMPORT_TEXT]));

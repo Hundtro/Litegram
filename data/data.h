@@ -3,17 +3,16 @@
 
 #include "data/language.h"
 
-/*this is the test struct
-*
-*struct Settings
-*{
-*    int lang;
-*    bool check1;
-*    bool check2;
-*    bool check3;
-*};
-*/
+/*this is a test struct*/
 
-/*extern Settings settings;*/
+struct Settings
+{
+    short int lang;
+    bool check1;
+    bool check2;
+    bool check3;
+};
+
+extern Settings options;
 
 #endif // DATA_H
