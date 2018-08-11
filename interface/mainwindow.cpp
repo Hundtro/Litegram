@@ -30,7 +30,6 @@ MainWindow :: MainWindow()
     checkButton = new QPushButton();
     clearButton = new QPushButton();
 
-
 /***Set Elements***/
 //programMenu:
     programMenu->addAction(importAction);
@@ -62,6 +61,7 @@ MainWindow :: MainWindow()
 //this:
     setLayout(mainLayout);
 
+/***Connect Elements***/
     //import
     connect(exitAction, SIGNAL(triggered(bool)), this, SIGNAL(exit_signal()));
     //options
