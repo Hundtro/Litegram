@@ -2,7 +2,6 @@
 Dyplo!
 
 To do (new):
-- data.h
-- settings.h (struct?)
+- define checked errors in settings
 - messages.h/errors.h
-- in language -> change char* to const char*
+- implement import operation (control, data)
