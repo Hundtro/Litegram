@@ -81,7 +81,6 @@ void MainWindow :: set_interface(const char* lang[])
     aboutAction->setText(QString(lang[6]));
     checkButton->setText(QString(lang[7]));
     clearButton->setText(QString(lang[8]));
-
 }
 
 void MainWindow :: set_text(const char *text)
