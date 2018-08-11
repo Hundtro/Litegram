@@ -2,11 +2,12 @@
 
 Control :: Control()
 {
-    wmain = new MainWindow();
     dict = new Dictionary();
+    langs = new Languages();
+    wmain = new MainWindow();
 
     //add load dictionary and errors check
-    //add set interface
+    //add set interface (langs->get(EN));
 
     //import
     connect(wmain, SIGNAL(exit_signal()), this, SLOT(exit_slot()));

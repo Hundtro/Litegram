@@ -10,6 +10,7 @@ class Control : public QObject
 private:
     Q_OBJECT
     Dictionary* dict;
+    Languages* langs;
     MainWindow* wmain;
 
 public:

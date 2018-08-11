@@ -1,27 +1,27 @@
 #ifndef LANGUAGE_H
 #define LANGUAGE_H
 
-enum
-{
-    EN,
-    PL
-};
+#include <string>
+#include <fstream>
 
-enum
-{
-    WMAIN_PROGRAM,
-    WMAIN_IMPORT_TEXT,
-    WMAIN_EXIT,
-    WMAIN_SETTINGS,
-    WMAIN_OPTIONS,
-    WMAIN_HELP,
-    WMAIN_ABOUT,
-    WMAIN_CHECK,
-    WMAIN_CLEAR
-};
+enum { EN, PL };
 
-extern const char* lang_en[];
-extern const char* lang_pl[];
-extern const char** langs[];
+const int LANGUAGES = 2;
+const int ELEMENTS = 9;
+
+class Languages
+{
+private:
+    const char** content[LANGUAGES];
+    short int loader;
+
+    bool load_content(int lang, const char* file);
+
+public:
+    Languages();
+    ~Languages();
+    bool load();
+    const char** get(int lang);
+};
 
 #endif

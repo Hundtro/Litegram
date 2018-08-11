@@ -1,7 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "data/data.h"
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QMenuBar>

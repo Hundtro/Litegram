@@ -72,15 +72,15 @@ MainWindow :: MainWindow()
 
 void MainWindow :: set_interface(const char* lang[])
 {
-    programMenu->setTitle(QString(lang[WMAIN_PROGRAM]));
-    settingsMenu->setTitle(QString(lang[WMAIN_SETTINGS]));
-    helpMenu->setTitle(QString(lang[WMAIN_HELP]));
-    importAction->setText(QString(lang[WMAIN_IMPORT_TEXT]));
-    exitAction->setText(QString(lang[WMAIN_EXIT]));
-    optionsAction->setText(QString(lang[WMAIN_OPTIONS]));
-    aboutAction->setText(QString(lang[WMAIN_ABOUT]));
-    checkButton->setText(QString(lang[WMAIN_CHECK]));
-    clearButton->setText(QString(lang[WMAIN_CLEAR]));
+    programMenu->setTitle(QString(lang[0]));
+    settingsMenu->setTitle(QString(lang[1]));
+    helpMenu->setTitle(QString(lang[2]));
+    importAction->setText(QString(lang[3]));
+    exitAction->setText(QString(lang[4]));
+    optionsAction->setText(QString(lang[5]));
+    aboutAction->setText(QString(lang[6]));
+    checkButton->setText(QString(lang[7]));
+    clearButton->setText(QString(lang[8]));
 
 }
 
