@@ -20,6 +20,7 @@ Control :: Control()
 Control :: ~Control()
 {
     delete wmain;
+    delete langs;
     delete dict;
 }
 
@@ -55,5 +56,5 @@ void Control :: check_slot()
 
 void Control :: clear_slot()
 {
-        wmain->set_text("");
+    wmain->set_text("");
 }

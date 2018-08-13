@@ -1,6 +1,6 @@
 #include "data/language.h"
 
-Language :: Language()
+Languages :: Languages()
 {
     loader = 0;
 
@@ -10,7 +10,7 @@ Language :: Language()
     }
 }
 
-~Language :: Language()
+~Languages :: Languages()
 {
     for(const char** language : content)
     {	
@@ -18,7 +18,7 @@ Language :: Language()
     }
 }
 
-bool Language :: load_content(int lang, const char* file)
+bool Languages :: load_content(int lang, const char* file)
 {
     std::ifstream stream(file);
 
@@ -42,7 +42,7 @@ bool Language :: load_content(int lang, const char* file)
     }
 }
 
-bool Language :: load()
+bool Languages :: load()
 {
     load_content(EN, "language\\EN");
     load_content(PL, "language\\PL");
@@ -53,7 +53,7 @@ bool Language :: load()
         return false;
 }
 
-const char** Language :: get(int lang)
+const char** Languages :: get(int lang)
 {
     return content[lang];
 }
