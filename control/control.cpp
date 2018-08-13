@@ -50,7 +50,11 @@ void Control :: begin()
 
 void Control :: import_slot()
 {
-  //
+    Import import;
+
+    import.select_txt();
+    import.import_txt();
+    wmain->set_text(import.get_text());
 }
 
 void Control :: exit_slot()
