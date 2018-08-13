@@ -7,6 +7,8 @@ int main(int argc, char* argv[])
 
     Control controller;
 
+    controller.begin();
+
     return app.exec();
 }
 
