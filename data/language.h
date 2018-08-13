@@ -7,7 +7,7 @@
 enum { EN, PL };
 
 const int LANGUAGES = 2;
-const int ELEMENTS = 9;
+const int ELEMENTS = 11;
 
 class Languages
 {

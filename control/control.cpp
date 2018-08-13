@@ -3,13 +3,28 @@
 Control :: Control()
 {
     /***Create Elements***/
-    dict = new Dictionary();
-    langs = new Languages();
-    opts = new Options();
+    dictionary = new Dictionary();
+    languages = new Languages();
+    options = new Options();
     wmain = new MainWindow();
 
-    //add load dictionary and errors check
-    //add set interface (langs->get(EN));
+    /***Set Elements***/
+    if(!dictionary.load())
+    {
+        //error
+        std::exit(1);
+    }
+
+    if(!languages.load())
+    {
+        //error
+        std::exit(2);
+    }
+
+    options.lang = EN;
+    //add set default options
+
+    wmain->set_interface(languages->get(EN));
 
     /***Connect Elements***/
     connect(wmain, SIGNAL(import_signal()), this, SLOT(import_slot()));
@@ -23,9 +38,9 @@ Control :: Control()
 Control :: ~Control()
 {
     delete wmain;
-    delete opts;
-    delete langs;
-    delete dict;
+    delete options;
+    delete languages;
+    delete dictionary;
 }
 
 void Control :: begin()

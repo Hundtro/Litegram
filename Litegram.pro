@@ -7,7 +7,7 @@ SOURCES += \
     main.cpp \
     interface/mainwindow.cpp \
     control/control.cpp \
-    data/data.cpp \
+    control/import.cpp \
     data/dictionary.cpp \
     data/language.cpp \
     data/messages.cpp
@@ -15,7 +15,7 @@ SOURCES += \
 HEADERS += \
     interface/mainwindow.h \
     control/control.h \
-    control/import_control.h \
+    control/import.h \
     data/data.h \
     data/dictionary.h \
     data/language.h \ 
