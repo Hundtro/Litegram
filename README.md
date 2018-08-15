@@ -6,3 +6,4 @@ To do (new):
 - messages.h/errors.h
 - implement import operation (control, data)
 - input text limit?
+- check file reading processes
