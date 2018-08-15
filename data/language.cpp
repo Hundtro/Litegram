@@ -4,13 +4,13 @@ Languages :: Languages()
 {
     loader = 0;
 
-    for(const char** language : content)
+    for(const char** language : content)//Unused??
     {	
         language = new const char*[ELEMENTS];
     }
 }
 
-~Languages :: Languages()
+Languages :: ~Languages()
 {
     for(const char** language : content)
     {	

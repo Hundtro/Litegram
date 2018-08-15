@@ -10,6 +10,7 @@ void Import :: import_txt()
     char* file_text;
     int length;
     std::ifstream file(path);
+    //not found?
 
     file.seekg(0, std::ios::end);
     length = file.tellg();

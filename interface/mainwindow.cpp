@@ -7,25 +7,20 @@ MainWindow :: MainWindow()
     mainLayout = new QVBoxLayout();
     textLayout = new QGridLayout();
     buttonsLayout = new QHBoxLayout();
-
     //MenuBars:
     menuBar = new QMenuBar();
-
     //Menus:
     programMenu = new QMenu();
     settingsMenu = new QMenu();
     languageMenu = new QMenu();
     helpMenu = new QMenu();
-
     //Actions:
     importAction = new QAction();
     exitAction = new QAction();
     optionsAction = new QAction();
     aboutAction = new QAction();
-
     //TextEdits:
     textEdit = new QTextEdit();
-
     //Buttons:
     checkButton = new QPushButton();
     clearButton = new QPushButton();
@@ -34,30 +29,23 @@ MainWindow :: MainWindow()
     //programMenu:
     programMenu->addAction(importAction);
     programMenu->addAction(exitAction);
-
     //settingsMenu:
     settingsMenu->addAction(optionsAction);
-
     //helpMenu:
     helpMenu->addAction(aboutAction);
-
     //menuBar:
     menuBar->addMenu(programMenu);
     menuBar->addMenu(settingsMenu);
     menuBar->addMenu(helpMenu);
-
     //textLayout:
     textLayout->addWidget(textEdit);
-
     //buttonsLayout:
     buttonsLayout->addWidget(checkButton);
     buttonsLayout->addWidget(clearButton);
-
     //mainLayout:
     mainLayout->setMenuBar(menuBar);
     mainLayout->addLayout(textLayout);
     mainLayout->addLayout(buttonsLayout);
-
     //this:
     setLayout(mainLayout);
 

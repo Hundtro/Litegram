@@ -5,15 +5,16 @@
 #include "data/data.h"
 #include "data/language.h"
 #include "data/dictionary.h"
+#include "data/messages.h"
 #include "interface/mainwindow.h"
 
 class Control : public QObject
 {
 private:
     Q_OBJECT
-    Dictionary* dict;
-    Languages* langs;
-    Options* opts;
+    Dictionary* dictionary;
+    Languages* languages;
+    Options* options;
     MainWindow* wmain;
 
 public:

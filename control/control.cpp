@@ -9,19 +9,19 @@ Control :: Control()
     wmain = new MainWindow();
 
     /***Set Elements***/
-    if(!dictionary.load())
+    if(!dictionary->load())
     {
         //error
         std::exit(1);
     }
 
-    if(!languages.load())
+    if(!languages->load())
     {
         //error
         std::exit(2);
     }
 
-    options.lang = EN;
+    options->lang = EN;
     //add set default options
 
     wmain->set_interface(languages->get(EN));
