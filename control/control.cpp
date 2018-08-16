@@ -74,7 +74,11 @@ void Control :: about_slot()
 
 void Control :: check_slot()
 {
-  //
+    Grammar gram;
+
+    gram.check(wmain->get_text()); //add options check!
+    
+    wmain->set_text(gram.get_result); // add html=true and set_html!
 }
 
 void Control :: clear_slot()

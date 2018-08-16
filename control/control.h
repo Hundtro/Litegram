@@ -1,6 +1,7 @@
 #ifndef CONTROL_H
 #define CONTROL_H
 
+#include "control/grammar.h"
 #include "control/import.h"
 #include "data/data.h"
 #include "data/language.h"

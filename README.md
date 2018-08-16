@@ -7,3 +7,4 @@ To do (new):
 - implement import operation (control, data)
 - input text limit?
 - check file reading processes
+- add universal file reader class?
