@@ -1,7 +1,7 @@
 #ifndef MESSAGES_H
 #define MESSAGES_H
 
-#include <data/language.h>
+#include "language/languages.h"
 /*#include MessageBox*/
 
 void load_error_info();

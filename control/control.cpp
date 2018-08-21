@@ -4,27 +4,23 @@ Control :: Control()
 {
     /***Create Elements***/
     dictionary = new Dictionary();
-    languages = new Languages();
     options = new Options();
     wmain = new MainWindow();
 
     /***Set Elements***/
+    //dictionary:
     if(!dictionary->load())
     {
         //error
         std::exit(1);
     }
-
-    if(!languages->load())
-    {
-        //error
-        std::exit(2);
-    }
-
+    //options:
     options->lang = EN;
-    //add set default options
-
-    wmain->set_interface(languages->get(EN));
+    options->check1 = false;
+    options->check2 = false;
+    options->check3 = false;
+    //wmain:
+    wmain->set_interface(language[options->lang]);
 
     /***Connect Elements***/
     connect(wmain, SIGNAL(import_signal()), this, SLOT(import_slot()));
@@ -39,7 +35,6 @@ Control :: ~Control()
 {
     delete wmain;
     delete options;
-    delete languages;
     delete dictionary;
 }
 
@@ -74,11 +69,9 @@ void Control :: about_slot()
 
 void Control :: check_slot()
 {
-    Grammar gram;
-
-    gram.check(wmain->get_text()); //add options check!
-    
-    wmain->set_text(gram.get_result); // add html=true and set_html!
+    //Grammar gram;
+    //add check + options check!
+    //add html=true and set_html!
 }
 
 void Control :: clear_slot()

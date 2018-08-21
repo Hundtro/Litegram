@@ -4,9 +4,9 @@
 #include "control/grammar.h"
 #include "control/import.h"
 #include "data/data.h"
-#include "data/language.h"
 #include "data/dictionary.h"
 #include "data/messages.h"
+#include "language/languages.h"
 #include "interface/mainwindow.h"
 
 class Control : public QObject
@@ -14,7 +14,6 @@ class Control : public QObject
 private:
     Q_OBJECT
     Dictionary* dictionary;
-    Languages* languages;
     Options* options;
     MainWindow* wmain;
 
