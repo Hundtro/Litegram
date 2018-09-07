@@ -1,6 +1,11 @@
 #include "language/languages.h"
 
-const char** language[] =
+const char** text[] =
 {
-    en, pl
+    text_en, text_pl
+};
+
+const char** error[] =
+{
+    error_en, error_pl
 };

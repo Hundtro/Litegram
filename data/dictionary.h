@@ -5,6 +5,7 @@
 #include <string>
 #include <map>
 #include <utility>
+#include "data/file_operations.h"
 
 class Dictionary
 {

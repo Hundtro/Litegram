@@ -2,11 +2,19 @@
 #define MESSAGES_H
 
 #include "language/languages.h"
-/*#include MessageBox*/
+#include <QMessageBox>
 
-void load_error_info();
-void about_info();
+namespace errors
+{
+    void load_dictionary();
+    void import_txt();
+    //
+}
 
-//add new message functions
+namespace info
+{
+    void about();
+    //
+}
 
 #endif // MESSAGES_H

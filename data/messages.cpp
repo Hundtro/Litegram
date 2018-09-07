@@ -1,11 +1,23 @@
 #include "data/messages.h"
 
-void load_error_info()
+//add language support
+
+void errors::load_dictionary()
 {
-    //show box
+    QMessageBox message;
+    message.setText(QString(error[EN][0]));
+    message.exec();
+    std::exit(1);
 }
 
-void about_info()
+void errors::import_txt()
 {
-    //show box 
+    QMessageBox message;
+    message.setText(QString(error[EN][1]));
+    message.exec();
+}
+
+void info::about()
+{
+    //show box
 }

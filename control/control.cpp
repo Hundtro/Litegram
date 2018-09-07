@@ -10,17 +10,14 @@ Control :: Control()
     /***Set Elements***/
     //dictionary:
     if(!dictionary->load())
-    {
-        //error
-        std::exit(1);
-    }
+    {errors::load_dictionary();}
     //options:
     options->lang = EN;
     options->check1 = false;
     options->check2 = false;
     options->check3 = false;
     //wmain:
-    wmain->set_interface(language[options->lang]);
+    wmain->set_interface(text[options->lang]);
 
     /***Connect Elements***/
     connect(wmain, SIGNAL(import_signal()), this, SLOT(import_slot()));
@@ -47,9 +44,12 @@ void Control :: import_slot()
 {
     Import import;
 
-    import.select_txt();
-    import.import_txt();
-    wmain->set_text(import.get_text());
+    import.select_txt(text[options->lang]);
+
+    if(import.import_txt())
+        wmain->set_text(import.get_text());
+    else
+        errors::import_txt();
 }
 
 void Control :: exit_slot()
@@ -64,7 +64,7 @@ void Control :: options_slot()
 
 void Control :: about_slot()
 {
-    about_info();
+    info::about();
 }
 
 void Control :: check_slot()

@@ -13,19 +13,24 @@ void Dictionary :: parse_line(std::string line)
 
 bool Dictionary ::load()
 {
-    std::ifstream pos_file("pos.db");
+    std::string content;
 
-    if(!pos_file)
-        return false;
-
-    std::string line;
-
-    while(std::getline(pos_file, line))
+    if(read_all_text("pos.db", content))
     {
-        parse_line(line);
-    }
+        std::istringstream text(content);
+        std::string line;
 
-    return true;
+        while(std::getline(text, line))
+        {
+            parse_line(line);
+        }
+
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 std::string Dictionary :: find_pos(std::string word)
