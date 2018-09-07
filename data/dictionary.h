@@ -1,8 +1,6 @@
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
 
-#include <fstream>
-#include <string>
 #include <map>
 #include <utility>
 #include "data/file_operations.h"
