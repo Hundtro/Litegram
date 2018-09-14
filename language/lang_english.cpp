@@ -13,7 +13,7 @@ const char* text_en[] =
     "Clear",
     "Select txt file to import",
     "txt file(*.txt)",
-    "Program writed for dyplo work."
+    "Program written for dyplo work."
 };
 
 const char* error_en[] =

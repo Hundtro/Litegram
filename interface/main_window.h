@@ -8,6 +8,7 @@
 #include <QAction>
 #include <QTextEdit>
 #include <QPushButton>
+#include "language/languages.h"
 
 class MainWindow : public QWidget
 {
@@ -32,7 +33,7 @@ private:
 
 public:
     explicit MainWindow();
-    void set_interface(const char* lang[]);
+    void set_interface(short int language);
     void set_text(const char* text);
     const char* get_text();
 

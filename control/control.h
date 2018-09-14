@@ -7,7 +7,8 @@
 #include "data/dictionary.h"
 #include "data/message.h"
 #include "language/languages.h"
-#include "interface/mainwindow.h"
+#include "interface/main_window.h"
+#include "interface/settings_window.h"
 
 class Control : public QObject
 {

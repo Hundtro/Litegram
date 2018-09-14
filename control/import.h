@@ -1,19 +1,19 @@
 #ifndef IMPORT_CONTROL_H
 #define IMPORT_CONTROL_H
 
-#include "data/file_operations.h"
 #include <QFileDialog>
+#include "data/file_operations.h"
+#include "language/languages.h"
 
 class Import
 {
 private:
-    const char* title;
-    const char* filter;
+    short int language;
     std::string path;
-    std::string text;
+    std::string content;
 
 public:
-    Import(const char* text[]);
+    Import(short int language);
     void select_txt();
     bool import_txt();
     const char* get_text();

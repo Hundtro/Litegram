@@ -5,7 +5,6 @@ QT += core gui widgets
 
 SOURCES += \
     main.cpp \
-    interface/mainwindow.cpp \
     control/control.cpp \
     control/import.cpp \
     data/dictionary.cpp \
@@ -13,10 +12,11 @@ SOURCES += \
     language/languages.cpp \
     language/lang_english.cpp \
     language/lang_polish.cpp \
-    data/message.cpp
+    data/message.cpp \
+    interface/main_window.cpp \
+    interface/settings_window.cpp
 
 HEADERS += \
-    interface/mainwindow.h \
     control/control.h \
     control/import.h \
     data/data.h \
@@ -25,4 +25,6 @@ HEADERS += \
     language/languages.h \
     language/lang_english.h \
     language/lang_polish.h \
-    data/message.h
+    data/message.h \
+    interface/main_window.h \
+    interface/settings_window.h

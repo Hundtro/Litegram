@@ -1,4 +1,4 @@
-#include <interface/mainwindow.h>
+#include <interface/main_window.h>
 
 MainWindow :: MainWindow()
 {
@@ -58,17 +58,17 @@ MainWindow :: MainWindow()
     connect(clearButton, SIGNAL(clicked(bool)), this, SIGNAL(clear_signal()));
 }
 
-void MainWindow :: set_interface(const char* lang[])
+void MainWindow :: set_interface(short int language)
 {
-    programMenu->setTitle(QString(lang[0]));
-    settingsMenu->setTitle(QString(lang[1]));
-    helpMenu->setTitle(QString(lang[2]));
-    importAction->setText(QString(lang[3]));
-    exitAction->setText(QString(lang[4]));
-    optionsAction->setText(QString(lang[5]));
-    aboutAction->setText(QString(lang[6]));
-    checkButton->setText(QString(lang[7]));
-    clearButton->setText(QString(lang[8]));
+    programMenu->setTitle(QString(text[language][0]));
+    settingsMenu->setTitle(QString(text[language][1]));
+    helpMenu->setTitle(QString(text[language][2]));
+    importAction->setText(QString(text[language][3]));
+    exitAction->setText(QString(text[language][4]));
+    optionsAction->setText(QString(text[language][5]));
+    aboutAction->setText(QString(text[language][6]));
+    checkButton->setText(QString(text[language][7]));
+    clearButton->setText(QString(text[language][8]));
 }
 
 void MainWindow :: set_text(const char *text)

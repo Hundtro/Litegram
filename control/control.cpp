@@ -15,12 +15,12 @@ Control :: Control()
         std::exit(1);
     }
     //options:
-    options->lang = PL;
+    options->lang = EN;
     options->check1 = true;
     options->check2 = true;
     options->check3 = true;
     //wmain:
-    wmain->set_interface(text[options->lang]);
+    wmain->set_interface(options->lang);
 
     /***Connect Elements***/
     connect(wmain, SIGNAL(import_signal()), this, SLOT(import_slot()));
@@ -45,7 +45,7 @@ void Control :: begin()
 
 void Control :: import_slot()
 {
-    Import import(text[options->lang]);
+    Import import(options->lang);
 
     import.select_txt();
 
