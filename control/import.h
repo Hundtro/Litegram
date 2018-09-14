@@ -7,11 +7,14 @@
 class Import
 {
 private:
+    const char* title;
+    const char* filter;
     std::string path;
     std::string text;
 
 public:
-    void select_txt(const char* text[]);
+    Import(const char* text[]);
+    void select_txt();
     bool import_txt();
     const char* get_text();
 };

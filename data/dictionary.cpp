@@ -11,7 +11,7 @@ void Dictionary :: parse_line(std::string line)
     words.insert(std::make_pair(word, pos));
 }
 
-bool Dictionary ::load()
+bool Dictionary :: load()
 {
     std::string content;
 

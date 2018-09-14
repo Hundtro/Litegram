@@ -1,11 +1,17 @@
 #include "control/import.h"
 
-void Import :: select_txt(const char* text[])
+Import :: Import(const char* text[])
+{
+    title = text[9];
+    filter = text[10];
+}
+
+void Import :: select_txt()
 {
     path = QFileDialog::getOpenFileName(nullptr,
-                                        text[9],
+                                        title,
                                         QDir::currentPath(),
-                                        text[10]).toStdString();
+                                        filter).toStdString();
 }
 
 bool Import :: import_txt()

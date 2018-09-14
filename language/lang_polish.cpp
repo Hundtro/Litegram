@@ -12,7 +12,8 @@ const char* text_pl[] =
     "Weryfikuj",
     "Wyczysc",
     "Wybierz plik txt do wczytania",
-    "pliki txt (*.txt)"
+    "pliki txt (*.txt)",
+    "Program napisany dla pracy dyplomowej."
 };
 
 const char* error_pl[] =

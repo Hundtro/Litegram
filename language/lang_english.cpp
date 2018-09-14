@@ -12,7 +12,8 @@ const char* text_en[] =
     "Check",
     "Clear",
     "Select txt file to import",
-    "txt file(*.txt)"
+    "txt file(*.txt)",
+    "Program writed for dyplo work."
 };
 
 const char* error_en[] =

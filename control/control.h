@@ -5,7 +5,7 @@
 #include "control/import.h"
 #include "data/data.h"
 #include "data/dictionary.h"
-#include "data/messages.h"
+#include "data/message.h"
 #include "language/languages.h"
 #include "interface/mainwindow.h"
 
