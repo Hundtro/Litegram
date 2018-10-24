@@ -15,26 +15,26 @@ class MainWindow : public QWidget
 private:
     Q_OBJECT
 
-    QVBoxLayout* mainLayout;
-    QGridLayout* textLayout;
-    QHBoxLayout* buttonsLayout;
-    QMenuBar* menuBar;
-    QMenu* programMenu;
-    QMenu* settingsMenu;
-    QMenu* languageMenu;
-    QMenu* helpMenu;
-    QAction* optionsAction;
-    QAction* importAction;
-    QAction* exitAction;
-    QAction* aboutAction;
-    QTextEdit* textEdit;
-    QPushButton* checkButton;
-    QPushButton* clearButton;
+    QVBoxLayout *mainLayout;
+    QGridLayout *textLayout;
+    QHBoxLayout *buttonsLayout;
+    QMenuBar *menuBar;
+    QMenu *programMenu;
+    QMenu *settingsMenu;
+    QMenu *languageMenu;
+    QMenu *helpMenu;
+    QAction *optionsAction;
+    QAction *importAction;
+    QAction *exitAction;
+    QAction *aboutAction;
+    QTextEdit *textEdit;
+    QPushButton *checkButton;
+    QPushButton *clearButton;
 
 public:
     explicit MainWindow();
     void set_interface(short int language);
-    void set_text(const char* text);
+    void set_text(const char *text);
     const char* get_text();
 
 signals:

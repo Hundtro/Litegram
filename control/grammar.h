@@ -10,7 +10,7 @@ private:
     std::string result;
 
 public:
-    void check(const char* text);
+    void check(const char *text);
     const char* get_result();
 };
 

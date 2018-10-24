@@ -2,12 +2,14 @@
 
 void Dictionary :: parse_line(std::string line)
 {
-    const char separator = 92;
-    int s_index = line.find_last_of(separator);
-
-    std::string word = line.substr(0, s_index);
-    std::string pos = line.substr(s_index+1, line.length());
-
+    const char separator = 92; //better "//"?
+	short int spr_index;
+	std::string word;
+	std::string pos;
+	
+    spr_index = line.find_last_of(separator);
+    word = line.substr(0, spr_index);
+    pos = line.substr(spr_index+1, line.length());
     words.insert(std::make_pair(word, pos));
 }
 
@@ -15,20 +17,17 @@ bool Dictionary :: load()
 {
     std::string content;
 
-    if(read_all_text("pos.db", content))
-    {
+    if (read_all_text("pos.db", content)) {
         std::istringstream text(content);
         std::string line;
 
-        while(std::getline(text, line))
-        {
+        while (std::getline(text, line)) {
             parse_line(line);
         }
 
         return true;
-    }
-    else
-    {
+    } else {
+		
         return false;
     }
 }

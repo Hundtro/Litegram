@@ -1,7 +1,6 @@
 #include "language/lang_polish.h"
 
-const char* text_pl[] =
-{
+const char *text_pl[] = {
     "Program",
     "Ustalenia",
     "Pomoc",
@@ -16,8 +15,7 @@ const char* text_pl[] =
     "Program napisany dla pracy dyplomowej."
 };
 
-const char* error_pl[] =
-{
+const char *error_pl[] = {
     "Nie mozna odczytac pliku pos.db! Kod: 1",
     "Nie mozna odczytac wybranego pliku! Kod: 2"
 };

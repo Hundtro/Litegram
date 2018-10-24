@@ -1,6 +1,6 @@
 #include "data/grammar.h"
 
-void Grammar :: check(const char* text)
+void Grammar :: check(const char *text)
 {
     //check operations on text
     result = text;

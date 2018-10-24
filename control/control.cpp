@@ -9,8 +9,7 @@ Control :: Control()
 
     /***Set Elements***/
     //dictionary:
-    if(!dictionary->load())
-    {
+    if (!dictionary->load()) {
         show_message(error[options->lang][0]);
         std::exit(1);
     }
@@ -48,7 +47,6 @@ void Control :: import_slot()
     Import import(options->lang);
 
     import.select_txt();
-
     if(import.import_txt())
         wmain->set_text(import.get_text());
     else

@@ -6,7 +6,7 @@
 
 enum { EN, PL };
 
-extern const char** text[];
-extern const char** error[];
+extern const char **text[];
+extern const char **error[];
 
 #endif // LANGUAGES_H

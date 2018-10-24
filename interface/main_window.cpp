@@ -79,5 +79,6 @@ void MainWindow :: set_text(const char *text)
 const char* MainWindow :: get_text()
 {
     QString text = textEdit->toPlainText();
+	
     return text.toStdString().c_str();
 }

@@ -14,9 +14,10 @@ class Control : public QObject
 {
 private:
     Q_OBJECT
-    Dictionary* dictionary;
-    Options* options;
-    MainWindow* wmain;
+	
+    Dictionary *dictionary;
+    Options *options;
+    MainWindow *wmain;
 
 public:
     Control();

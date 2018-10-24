@@ -1,7 +1,6 @@
 #include "language/lang_english.h"
 
-const char* text_en[] =
-{
+const char *text_en[] = {
     "Program",
     "Settings",
     "Help",
@@ -16,8 +15,7 @@ const char* text_en[] =
     "Program written for dyplo work."
 };
 
-const char* error_en[] =
-{
+const char *error_en[] = {
     "Can not read file pos.db! Code: 1",
     "Can not open selected file! Code: 2"
 };

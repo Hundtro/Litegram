@@ -2,7 +2,6 @@
 #define SETTINGS_WINDOW_H
 
 #include <QWidget>
-
 #include "language/languages.h"
 #include "data/data.h"
 
