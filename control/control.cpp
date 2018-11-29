@@ -1,3 +1,8 @@
+/*
+ * Remove comments
+ * Replace function dictionary->load from constructor to begin function
+ */
+
 #include <control/control.h>
 
 Control :: Control()
