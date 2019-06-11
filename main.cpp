@@ -1,12 +1,11 @@
+#include <modules/main_module.h>
 #include <QApplication>
-#include "control/control.h"
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-    QApplication app(argc, argv);
-    Control controller;
+    QApplication a(argc, argv);
+    MainModule mainModule;
+    mainModule.run();
 
-    controller.begin();
-
-    return app.exec();
+    return a.exec();
 }

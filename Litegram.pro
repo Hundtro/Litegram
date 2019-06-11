@@ -2,29 +2,22 @@ TARGET = Litegram
 TEMPLATE = app
 
 QT += core gui widgets
+DEFINES += QT_DEPRECATED_WARNINGS
+CONFIG += c++11
 
 SOURCES += \
-    main.cpp \
-    control/control.cpp \
-    control/import.cpp \
-    data/dictionary.cpp \
-    data/file_operations.cpp \
-    language/languages.cpp \
-    language/lang_english.cpp \
-    language/lang_polish.cpp \
-    data/message.cpp \
-    interface/main_window.cpp \
-    interface/settings_window.cpp
+        main.cpp \
+        views/main_view.cpp \
+    modules/main_module.cpp
 
 HEADERS += \
-    control/control.h \
-    control/import.h \
-    data/data.h \
-    data/dictionary.h \
-    data/file_operations.h \
-    language/languages.h \
-    language/lang_english.h \
-    language/lang_polish.h \
-    data/message.h \
-    interface/main_window.h \
-    interface/settings_window.h
+        views/main_view.h \
+    modules/main_module.h
+
+FORMS += \
+        views/main_view.ui
+
+# Default rules for deployment.
+#qnx: target.path = /tmp/$${TARGET}/bin
+#else: unix:!android: target.path = /opt/$${TARGET}/bin
+#!isEmpty(target.path): INSTALLS += target
