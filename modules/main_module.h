@@ -1,7 +1,8 @@
 #ifndef MAIN_MODULE_H
 #define MAIN_MODULE_H
 
-#include "views/main_view.h"
+#include <views/main_view.h>
+#include <utils/message.h>
 
 class MainModule : public QObject
 {

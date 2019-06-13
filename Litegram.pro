@@ -8,11 +8,13 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         views/main_view.cpp \
-    modules/main_module.cpp
+    modules/main_module.cpp \
+    utils/message.cpp
 
 HEADERS += \
         views/main_view.h \
-    modules/main_module.h
+    modules/main_module.h \
+    utils/message.h
 
 FORMS += \
         views/main_view.ui
