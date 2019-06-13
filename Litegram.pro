@@ -9,12 +9,14 @@ SOURCES += \
         main.cpp \
         views/main_view.cpp \
     modules/main_module.cpp \
-    utils/message.cpp
+    utils/message.cpp \
+    utils/text.cpp
 
 HEADERS += \
         views/main_view.h \
     modules/main_module.h \
-    utils/message.h
+    utils/message.h \
+    utils/text.h
 
 FORMS += \
         views/main_view.ui

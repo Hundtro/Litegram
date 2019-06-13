@@ -3,6 +3,7 @@
 
 #include <views/main_view.h>
 #include <utils/message.h>
+#include <QApplication>
 
 class MainModule : public QObject
 {
