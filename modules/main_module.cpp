@@ -2,6 +2,7 @@
 
 MainModule :: MainModule()
 {
+    dictionary = new Dictionary();
     mainView = new MainView();
 
     connect(mainView, SIGNAL(signal_import()), this, SLOT(slot_import()));
@@ -14,11 +15,18 @@ MainModule :: MainModule()
 
 MainModule :: ~MainModule()
 {
+    delete dictionary;
     delete mainView;
 }
 
 void MainModule :: run()
 {
+    QString posData = readAllText("pos.db");
+    if (posData.isEmpty())
+        showMessage(tr("Can not read dictionary file!"));
+    else
+        dictionary->parsePOSdata(posData.toStdString());
+
     mainView->show();
 }
 

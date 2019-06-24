@@ -6,20 +6,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        views/main_view.cpp \
+    main.cpp \
+    views/main_view.cpp \
     modules/main_module.cpp \
     utils/message.cpp \
-    utils/text.cpp
+    utils/text.cpp \
+    utils/dictionary.cpp
 
 HEADERS += \
-        views/main_view.h \
+    views/main_view.h \
     modules/main_module.h \
     utils/message.h \
-    utils/text.h
+    utils/text.h \
+    utils/dictionary.h
 
 FORMS += \
-        views/main_view.ui
+    views/main_view.ui
 
 # Default rules for deployment.
 #qnx: target.path = /tmp/$${TARGET}/bin

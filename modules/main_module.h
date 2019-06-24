@@ -1,8 +1,10 @@
 #ifndef MAIN_MODULE_H
 #define MAIN_MODULE_H
 
-#include <views/main_view.h>
+#include <utils/dictionary.h>
 #include <utils/message.h>
+#include <utils/text.h>
+#include <views/main_view.h>
 #include <QApplication>
 
 class MainModule : public QObject
@@ -11,6 +13,7 @@ private:
     Q_OBJECT
 
     MainView* mainView;
+    Dictionary* dictionary;
 
 public:
     MainModule();
