@@ -1,4 +1,4 @@
-#include <utils/text.h>
+#include <utils/file.h>
 
 QString readAllText(QString filePath)
 {

@@ -3,7 +3,7 @@
 
 #include <utils/dictionary.h>
 #include <utils/message.h>
-#include <utils/text.h>
+#include <utils/file.h>
 #include <views/main_view.h>
 #include <QApplication>
 

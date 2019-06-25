@@ -2,11 +2,11 @@
 
 void Dictionary :: parsePOSdata(std::string data)
 {
+    const char separator = '\\';
     std::istringstream text(data);
     std::string line;
 
     while (std::getline(text, line)) {
-        const char separator = '\\';
         int spr_index;
         std::string word;
         std::string pos;

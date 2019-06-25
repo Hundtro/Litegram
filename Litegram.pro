@@ -10,15 +10,15 @@ SOURCES += \
     views/main_view.cpp \
     modules/main_module.cpp \
     utils/message.cpp \
-    utils/text.cpp \
-    utils/dictionary.cpp
+    utils/dictionary.cpp \
+    utils/file.cpp
 
 HEADERS += \
     views/main_view.h \
     modules/main_module.h \
     utils/message.h \
-    utils/text.h \
-    utils/dictionary.h
+    utils/dictionary.h \
+    utils/file.h
 
 FORMS += \
     views/main_view.ui

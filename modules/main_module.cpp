@@ -22,10 +22,12 @@ MainModule :: ~MainModule()
 void MainModule :: run()
 {
     QString posData = readAllText("pos.db");
-    if (posData.isEmpty())
+    if (posData.isEmpty()) {
         showMessage(tr("Can not read dictionary file!"));
-    else
+        exit(1);
+    } else {
         dictionary->parsePOSdata(posData.toStdString());
+    }
 
     mainView->show();
 }
@@ -47,7 +49,7 @@ void MainModule :: slot_options()
 
 void MainModule :: slot_about()
 {
-
+    showMessage(tr("Lietegram - in progress"));
 }
 
 void MainModule :: slot_check()
@@ -57,5 +59,5 @@ void MainModule :: slot_check()
 
 void MainModule :: slot_clear()
 {
-
+    mainView->setText(QString());
 }
