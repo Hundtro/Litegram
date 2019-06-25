@@ -13,3 +13,11 @@ QString readAllText(QString filePath)
         return QString();
     }
 }
+
+QString chooseFilePath()
+{
+    return QFileDialog::getOpenFileName(nullptr,
+                                        QObject::tr("Choose txt file"),
+                                        QDir::currentPath(),
+                                        QObject::tr("Txt Files (*.txt)"));
+}

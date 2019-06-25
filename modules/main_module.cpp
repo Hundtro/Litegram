@@ -34,7 +34,14 @@ void MainModule :: run()
 
 void MainModule :: slot_import()
 {
-
+    QString filePath = chooseFilePath();
+    if (!filePath.isEmpty()) {
+        QString fileText = readAllText(filePath);
+        if (fileText.isEmpty())
+            showMessage(tr("Can not import text file!"));
+        else
+            mainView->setText(fileText);
+    }
 }
 
 void MainModule :: slot_exit()
