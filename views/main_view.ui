@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>600</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,6 +17,16 @@
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="2">
+       <widget class="QTextEdit" name="textEdit">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <underline>false</underline>
+         </font>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="0">
        <widget class="QPushButton" name="clearButton">
         <property name="font">
@@ -28,6 +38,91 @@
          <string>Clear</string>
         </property>
        </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="applyButton">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Apply</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QGroupBox" name="groupBoxCheck">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Check options</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QCheckBox" name="checkBoxWords">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>121</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Check words</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBoxLanguage">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Language</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QRadioButton" name="radioButtonEnglish">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>121</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>English</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButtonPolish">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>80</y>
+             <width>121</width>
+             <height>19</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Polski</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item row="2" column="1">
        <widget class="QPushButton" name="checkButton">
@@ -47,16 +142,6 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="0" colspan="2">
-       <widget class="QTextEdit" name="textEdit">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-          <underline>false</underline>
-         </font>
-        </property>
-       </widget>
-      </item>
      </layout>
     </item>
    </layout>
@@ -66,8 +151,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>34</height>
+     <width>600</width>
+     <height>22</height>
     </rect>
    </property>
    <property name="font">
@@ -87,12 +172,6 @@
     <addaction name="actionImport"/>
     <addaction name="actionExit"/>
    </widget>
-   <widget class="QMenu" name="menuSettings">
-    <property name="title">
-     <string>Settings</string>
-    </property>
-    <addaction name="actionOptions"/>
-   </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
      <string>Help</string>
@@ -100,7 +179,6 @@
     <addaction name="actionAbout"/>
    </widget>
    <addaction name="menuProgram"/>
-   <addaction name="menuSettings"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -112,16 +190,6 @@
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
-   </property>
-  </action>
-  <action name="actionOptions">
-   <property name="text">
-    <string>Options...</string>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
    </property>
   </action>
   <action name="actionAbout">

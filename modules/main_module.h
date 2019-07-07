@@ -1,6 +1,7 @@
 #ifndef MAIN_MODULE_H
 #define MAIN_MODULE_H
 
+#include <utils/settings.h>
 #include <utils/dictionary.h>
 #include <utils/message.h>
 #include <utils/file.h>
@@ -14,6 +15,7 @@ private:
 
     MainView* mainView;
     Dictionary* dictionary;
+    Settings* settings;
 
 public:
     MainModule();
@@ -23,10 +25,10 @@ public:
 public slots:
     void slot_import();
     void slot_exit();
-    void slot_options();
     void slot_about();
     void slot_check();
     void slot_clear();
+    void slot_apply();
 };
 
 #endif // MAIN_MODULE_H

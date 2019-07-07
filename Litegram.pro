@@ -18,7 +18,8 @@ HEADERS += \
     modules/main_module.h \
     utils/message.h \
     utils/dictionary.h \
-    utils/file.h
+    utils/file.h \
+    utils/settings.h
 
 FORMS += \
     views/main_view.ui

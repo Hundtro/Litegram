@@ -1,6 +1,7 @@
 #ifndef MAIN_VIEW_H
 #define MAIN_VIEW_H
 
+#include <utils/settings.h>
 #include <QMainWindow>
 
 namespace Ui {
@@ -16,6 +17,7 @@ public:
     ~MainView();
     void setText(QString text);
     QString getText();
+    void applySettings(Settings &settings);
 
 private:
     Ui::MainView *ui;
@@ -23,10 +25,10 @@ private:
 signals:
     void signal_exit();
     void signal_import();
-    void signal_options();
     void signal_about();
     void signal_check();
     void signal_clear();
+    void signal_apply();
 };
 
 #endif // MAIN_VIEW_H

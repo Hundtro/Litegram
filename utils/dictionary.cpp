@@ -7,13 +7,13 @@ void Dictionary :: parsePOSdata(std::string data)
     std::string line;
 
     while (std::getline(text, line)) {
-        int spr_index;
+        int sprIndex;
         std::string word;
         std::string pos;
 
-        spr_index = line.find_last_of(separator);
-        word = line.substr(0, spr_index);
-        pos = line.substr(spr_index+1, line.length());
+        sprIndex = line.find_last_of(separator);
+        word = line.substr(0, sprIndex);
+        pos = line.substr(sprIndex+1, line.length());
         wordsPOS.insert(std::make_pair(word, pos));
     }
 }
