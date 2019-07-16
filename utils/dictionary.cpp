@@ -1,4 +1,4 @@
-#include <utils/dictionary.h>
+#include <dictionary.h>
 
 void Dictionary :: parsePOSdata(std::string data)
 {

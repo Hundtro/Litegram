@@ -1,4 +1,4 @@
-#include <utils/message.h>
+#include <message.h>
 
 void showMessage(QString message)
 {

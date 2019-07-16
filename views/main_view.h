@@ -1,7 +1,7 @@
 #ifndef MAIN_VIEW_H
 #define MAIN_VIEW_H
 
-#include <utils/settings.h>
+#include <settings.h>
 #include <QMainWindow>
 
 namespace Ui {

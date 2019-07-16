@@ -1,14 +1,13 @@
-#include <modules/main_module.h>
+#include <main_module.h>
 
 MainModule::MainModule()
 {
     dictionary = new Dictionary();
-    mainView = new MainView();
     settings = new Settings();
+    mainView = new MainView();
 
     connect(mainView, SIGNAL(signal_import()), this, SLOT(slot_import()));
     connect(mainView, SIGNAL(signal_exit()), this, SLOT(slot_exit()));
-    //connect(mainView, SIGNAL(signal_options()), this, SLOT(slot_options()));
     connect(mainView, SIGNAL(signal_about()), this, SLOT(slot_about()));
     connect(mainView, SIGNAL(signal_check()), this, SLOT(slot_check()));
     connect(mainView, SIGNAL(signal_clear()), this, SLOT(slot_clear()));
@@ -18,8 +17,8 @@ MainModule::MainModule()
 MainModule::~MainModule()
 {
     delete dictionary;
-    delete mainView;
     delete settings;
+    delete mainView;
 }
 
 void MainModule::run()
