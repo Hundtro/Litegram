@@ -7,12 +7,14 @@
 #include <file.h>
 #include <main_view.h>
 #include <QApplication>
+#include <QTranslator>
 
 class MainModule : public QObject
 {
 private:
     Q_OBJECT
 
+    QTranslator language;
     MainView* mainView;
     Dictionary* dictionary;
     Settings* settings;

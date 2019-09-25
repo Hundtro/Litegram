@@ -31,11 +31,18 @@ QString MainView::getText()
 
 void MainView::applySettings(Settings &settings)
 {
-    if (ui->radioButtonEnglish->isChecked()) settings.language = EN;
-    if (ui->radioButtonPolish->isChecked()) settings.language = PL;
+    if (ui->radioButtonEnglish->isChecked())
+        settings.language = EN;
+    if (ui->radioButtonPolish->isChecked())
+        settings.language = PL;
 
     if (ui->checkBoxWords->isChecked())
         settings.checkWords = true;
     else
         settings.checkWords = false;
+}
+
+void MainView::changeLanguage()
+{
+    ui->retranslateUi(this);
 }
