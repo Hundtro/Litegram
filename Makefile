@@ -11,6 +11,7 @@ INCLUDE=-I/usr/include/qt \
        	-Iutils/ \
        	-Iviews/ \
 	-Ibin/
+
 LIBS=-L/usr/lib \
      -lQt5Widgets \
      -lQt5Gui \
