@@ -18,6 +18,7 @@ public:
     void setText(QString text);
     QString getText();
     void applySettings(Settings &settings);
+    void changeLanguage();
 
 private:
     Ui::MainView *ui;

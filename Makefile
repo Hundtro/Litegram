@@ -3,13 +3,30 @@
 #
 
 #Header and Libraries
-INCLUDE=-I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtCore -I/usr/include/qt/QtGui -Imodules/ -Iutils/ -Iviews/ -Ibin/
-LIBS=-L/usr/lib -lQt5Widgets -lQt5Gui -lQt5Core
+INCLUDE=-I/usr/include/qt \
+        -I/usr/include/qt/QtWidgets \
+        -I/usr/include/qt/QtCore \
+       	-I/usr/include/qt/QtGui \
+       	-Imodules/ \
+       	-Iutils/ \
+       	-Iviews/ \
+	-Ibin/
+LIBS=-L/usr/lib \
+     -lQt5Widgets \
+     -lQt5Gui \
+     -lQt5Core
 
 #Files
 BIN=bin
 TARGET=$(BIN)/Litegram
-OBJECTS=$(BIN)/main.o $(BIN)/main_module.o $(BIN)/moc_main_module.o $(BIN)/dictionary.o $(BIN)/message.o $(BIN)/file.o $(BIN)/main_view.o $(BIN)/moc_main_view.o
+OBJECTS=$(BIN)/main.o \
+       	$(BIN)/main_module.o \
+       	$(BIN)/moc_main_module.o \
+       	$(BIN)/dictionary.o \
+       	$(BIN)/message.o \
+	$(BIN)/file.o \
+       	$(BIN)/main_view.o \
+       	$(BIN)/moc_main_view.o
 
 #Compiler
 CXX=g++
@@ -23,8 +40,23 @@ MOC=/usr/bin/moc $(MOC_DEFINES) --include $(BIN)/moc_predefs.h $(INCLUDE) $< -o 
 #UIC
 UIC=/usr/bin/uic $< -o $(BIN)/$@
 
+#Translation
+EN_FILE=data/language_en.ts
+PL_FILE=data/language_pl.ts
+
 #Commands
-BUILD_RULES=mkbin cppos moc_predefs.h main.o main_module.o moc_main_module.o dictionary.o message.o file.o main_view.o moc_main_view.o
+BUILD_RULES=mkbin \
+	    cppos \
+	    moc_predefs.h \
+	    main.o \
+	    main_module.o \
+	    moc_main_module.o \
+	    dictionary.o \
+	    message.o \
+            file.o \
+	    main_view.o \
+	    moc_main_view.o \
+	    make_translations
 COMPILE=$(CXX) $(CFLAGS) $(INCLUDE)
 BUILD=$(CXX) $(LFLAGS) $(TARGET) $(OBJECTS) $(LIBS)
 
@@ -66,6 +98,10 @@ ui_main_view.h: views/main_view.ui
 
 moc_predefs.h: /usr/lib/qt/mkspecs/features/data/dummy.cpp
 	$(CXX) -pipe -g -std=gnu++11 -Wall -W -dM -E -o $(BIN)/$@ $< 
+
+make_translations:
+	lrelease $(EN_FILE) -qm $(BIN)/language_en.qm
+	lrelease $(PL_FILE) -qm $(BIN)/language_pl.qm
 
 mkbin:
 	mkdir -p $(BIN)

@@ -23,6 +23,9 @@ MainModule::~MainModule()
 
 void MainModule::run()
 {
+    settings->language = EN;
+    settings->checkWords = true;
+
     QString posData = readAllText("pos.db");
     if (posData.isEmpty()) {
         showMessage(tr("Can not read dictionary file!"));
@@ -30,9 +33,6 @@ void MainModule::run()
     } else {
         dictionary->parsePOSdata(posData.toStdString());
     }
-
-    settings->language = EN;
-    settings->checkWords = true;
 
     mainView->show();
 }
@@ -72,5 +72,14 @@ void MainModule::slot_clear()
 void MainModule::slot_apply()
 {
     mainView->applySettings(*settings);
-    //retranslate()
+    switch (settings->language) {
+        case EN:
+            language.load("language_en.qm");
+            break;
+        case PL:
+            language.load("language_pl.qm");
+            break;
+    }
+    qApp->installTranslator(&language);
+    mainView->changeLanguage();
 }
